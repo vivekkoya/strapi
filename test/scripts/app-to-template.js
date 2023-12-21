@@ -133,8 +133,6 @@ yargs
           }
         }
 
-        // Usage
-
         const sourceAbsolutePath = path.resolve(process.cwd(), source);
         const destinationAbsolutePath = path.resolve(process.cwd(), destination);
 
