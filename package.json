@@ -48,6 +48,7 @@
     "prettier:write": "prettier --write \"**/*.{js,ts,jsx,tsx,json,md,mdx,css,scss,yaml,yml}\"",
     "setup": "yarn && yarn clean && yarn build",
     "test:api": "node test/scripts/run-api-tests.js",
+    "test:app2template": "yarn build:ts && node test/scripts/app-to-template.js",
     "test:clean": "rimraf ./coverage",
     "test:cli": "node test/scripts/run-cli-tests.js",
     "test:cli:clean": "node test/scripts/run-cli-tests.js clean",
