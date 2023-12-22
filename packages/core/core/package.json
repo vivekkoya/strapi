@@ -56,7 +56,6 @@
     "@koa/router": "10.1.1",
     "@paralleldrive/cuid2": "2.2.2",
     "@strapi/admin": "4.15.5",
-    "@strapi/data-transfer": "4.15.5",
     "@strapi/database": "4.15.5",
     "@strapi/generate-new": "4.15.5",
     "@strapi/generators": "4.15.5",
