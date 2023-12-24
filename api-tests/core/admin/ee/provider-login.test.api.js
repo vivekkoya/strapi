@@ -153,7 +153,6 @@ describeOnCondition(edition === 'EE')('Provider Login', () => {
       const res = await requests.admin.put('/admin/providers/options', {
         body: { ...newOptions, autoRegister: 'foobar' },
       });
-
       expect(res.status).toBe(hasSSO ? 400 : 405);
     });
   });
