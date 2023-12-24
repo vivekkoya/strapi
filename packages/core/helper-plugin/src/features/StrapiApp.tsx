@@ -4,7 +4,10 @@ import { LinkProps } from 'react-router-dom';
 
 import { TranslationMessage } from '../types';
 
+import { Plugin } from '../../admin/admin/src/core/apis' 
+  
 import type { Permission } from './RBAC';
+ 
 
 type ComponentModule = () =>
   | Promise<{ default?: React.ComponentType } | React.ComponentType>
@@ -48,21 +51,21 @@ type InjectionZoneBlock = InjectionZoneArea extends `${string}.${string}.${infer
   : never;
 
 // TODO: this should come from `core/admin/src/core/apis/Plugins`
-interface Plugin {
-  apis: Record<string, unknown>;
-  injectionZones: Record<
-    string,
-    Record<string, Array<{ name: string; Component: React.ComponentType }>>
-  >;
-  initializer: React.ComponentType<{ setPlugin(pluginId: string): void }>;
-  getInjectedComponents: (
-    containerName: string,
-    blockName: string
-  ) => Array<{ name: string; Component: React.ComponentType }>;
-  isReady: boolean;
-  name: string;
-  pluginId: string;
-}
+// interface Plugin {
+//   apis: Record<string, unknown>;
+//   injectionZones: Record<
+//     string,
+//     Record<string, Array<{ name: string; Component: React.ComponentType }>>
+//   >;
+//   initializer: React.ComponentType<{ setPlugin(pluginId: string): void }>;
+//   getInjectedComponents: (
+//     containerName: string,
+//     blockName: string
+//   ) => Array<{ name: string; Component: React.ComponentType }>;
+//   isReady: boolean;
+//   name: string;
+//   pluginId: string;
+// }
 
 interface StrapiAppSettingLink {
   id: string;
